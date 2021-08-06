@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Select from 'react-select';
 //npm i --save react-select
@@ -24,22 +23,26 @@ function App() {
   
   const customStyles = {
   option: (provided, state) => ({
-    //...provided,
+    ...provided,
     borderBottom: '1px dotted pink',
     color: state.isSelected ? 'red' : 'pink',
+    backgroundColor: 'white',
     padding: 20,
+    fontSize: '0.5rem',
   }),
   control: () => ({
     // none of react-select's styles are passed to <Control />
     width: 200,
-    color: 'blue',
+    color: 'yellow',
   }), 
   singleValue: (provided, state) => {
-    const opacity = state.isDisabled ? 0.8 : 1;
-    const transition = 'opacity 300ms';
-    const color = 'gold'
+    
+    const color = 'darkblue';
+    const backgroundColor = 'white';
+    const padding = '0.5rem'
+    const fontSize= '1rem';
 
-    return { ...provided, opacity, transition, color };
+    return { ...provided, color, fontSize, backgroundColor, padding };
   }
 }
 
@@ -47,32 +50,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         
-        <p>
+        <p className="text">
           This is an example of how to make a dropdown button in React, since it's difficult to style the options in just HTML. 
         </p>
         <div>
         <Select
         options={options}
         styles={customStyles}
-        label="dropdown"
-        placeholder="Select"
-        theme={theme => ({
-    ...theme,
-    borderRadius: 0,
-    colors: {
-      ...theme.colors,
-      neutral50: 'orange',  // Placeholder color
-    }
-  })}/>
+        placeholder={<div className="placeholder">Select</div>}
+        />
         </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

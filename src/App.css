@@ -19,17 +19,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 8rem;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.selectElement {
-  color: green;
+.text {
+  font-size: 0.9rem;
+  color: yellowgreen;
+
+}
+
+.placeholder {
+  font-size: 2rem;
+  color: crimson;
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  
 }
 
 @keyframes App-logo-spin {
