@@ -36,15 +36,21 @@
 }
 
 .placeholder {
-  font-size: 2rem;
+  font-size: 1rem;
   color: crimson;
   background-color: white;
   width: 200px;
   padding: 10px;
   border-radius: 5px;
-  
+
 }
 
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
