@@ -5,7 +5,7 @@ import Select from 'react-select';
 
 
 
-function App() {
+function App(props) {
 
   const [input, setInput] = useState('');
   const [getal, setGetal] = useState('');
@@ -28,8 +28,6 @@ function App() {
     setInput('');
     setGetal(null);
   }
-
-  
 
   const options=[
     {
